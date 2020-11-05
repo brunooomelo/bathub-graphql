@@ -1,6 +1,6 @@
 import express from 'express'
-import { graphqlHTTP } from 'express-graphql'
 import cors from 'cors'
+import { graphqlHTTP } from 'express-graphql'
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import schema from './modules/buildTypeDefs'
 import resolvers from './modules/buildResolver'
@@ -22,8 +22,5 @@ app.use(
 )
 
 connectDatabase()
-  .then(() => 
-    app.listen(3333)
-  ).then(() => 
-    console.log(`server listening`)
-  )
+  .then(() => app.listen(3333))
+  .then(() => console.log(`server listening`))
