@@ -9,13 +9,24 @@ type User {
 input UserInput {
   username: String!
   email: String!
-  password: String! 
+  password: String!
+}
+
+input resetPasswordInput {
+  email: String!
+  password: String!
+  token: String!
 }
 
 type Query {
-  getUser: User
+  getUsers: [User!]!
+  getUser(id: ID): User!
 }
 
 type Mutation {
   createUser(data: UserInput): User!
+  activeUser(id: ID!): User!
+  disableUser(id: ID!): User!
+  forgotPassword(credentials: String!): Boolean!
+  resetPassword(data: resetPasswordInput): Boolean!
 }
