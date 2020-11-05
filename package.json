@@ -1,0 +1,33 @@
+{
+  "name": "bathub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js -e js,gql",
+    "start": "babel-node src/server.js -e js,gql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/load-files": "^6.2.4",
+    "@graphql-tools/merge": "^6.2.5",
+    "@graphql-tools/schema": "^7.0.0",
+    "@graphql-tools/schema-merging": "^5.0.1-alpha-78275ec.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.4.0",
+    "mongoose": "^5.10.12"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1",
+    "babel-plugin-import-graphql": "^2.7.0",
+    "nodemon": "^2.0.6"
+  }
+}
