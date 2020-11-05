@@ -1,0 +1,21 @@
+type User {
+  _id: ID!
+  username: String!
+  email: String!
+  isActive: Boolean!
+  isAdmin: Boolean!
+}
+
+input UserInput {
+  username: String!
+  email: String!
+  password: String! 
+}
+
+type Query {
+  getUser: User
+}
+
+type Mutation {
+  createUser(data: UserInput): User!
+}
